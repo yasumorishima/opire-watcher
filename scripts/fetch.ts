@@ -20,7 +20,37 @@ type Bounty = {
   trying_usernames: string[];
   created_at: string | null;
   fetched_at: string;
+  issue_state?: "open" | "closed" | "unknown";
+  issue_github_assignees?: string[];
+  availability_checked_at?: string;
 };
+
+async function checkIssue(
+  url: string | null,
+  token: string | undefined,
+): Promise<{ state: "open" | "closed" | "unknown"; assignees: string[] } | null> {
+  if (!url) return null;
+  const m = url.match(/github\.com\/([^/]+)\/([^/]+)\/issues\/(\d+)/i);
+  if (!m) return null;
+  const [, owner, repo, num] = m;
+  try {
+    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/issues/${num}`, {
+      headers: {
+        "user-agent": "opire-watcher",
+        accept: "application/vnd.github+json",
+        ...(token ? { authorization: `Bearer ${token}` } : {}),
+      },
+    });
+    if (!res.ok) return { state: "unknown", assignees: [] };
+    const j = (await res.json()) as any;
+    return {
+      state: j.state === "closed" ? "closed" : j.state === "open" ? "open" : "unknown",
+      assignees: (j.assignees ?? []).map((a: any) => a.login),
+    };
+  } catch {
+    return { state: "unknown", assignees: [] };
+  }
+}
 
 function extractRepoOwner(url: string | null): string | null {
   if (!url) return null;
@@ -78,6 +108,27 @@ async function main() {
     : [];
   const prevIds = new Set(prev.map((b) => b.id));
   const newOnes = bounties.filter((b) => !prevIds.has(b.id));
+
+  const ghToken = process.env.GITHUB_TOKEN;
+  for (const b of bounties) {
+    const info = await checkIssue(b.url, ghToken);
+    if (info) {
+      b.issue_state = info.state;
+      b.issue_github_assignees = info.assignees;
+      b.availability_checked_at = now;
+    }
+  }
+  const prevById = new Map(prev.map((b) => [b.id, b]));
+  for (const b of bounties) {
+    if (b.issue_state === undefined) {
+      const p = prevById.get(b.id);
+      if (p?.issue_state !== undefined) {
+        b.issue_state = p.issue_state;
+        b.issue_github_assignees = p.issue_github_assignees;
+        b.availability_checked_at = p.availability_checked_at;
+      }
+    }
+  }
 
   const merged = [
     ...bounties,

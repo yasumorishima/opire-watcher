@@ -13,9 +13,13 @@ type Bounty = {
   claimer_usernames: string[];
   trying_usernames: string[];
   created_at: string | null;
+  issue_state?: "open" | "closed" | "unknown";
+  issue_github_assignees?: string[];
 };
 
 function isAvailable(b: Bounty): boolean {
+  if (b.issue_state === "closed") return false;
+  if (b.issue_github_assignees && b.issue_github_assignees.length > 0) return false;
   if (b.claimer_usernames.length > 0) return false;
   return true;
 }
@@ -64,11 +68,15 @@ function topLanguages(bounties: Bounty[], limit = 8): string {
 }
 
 function statusBadge(b: Bounty): string {
+  if (b.issue_state === "closed") return "🔒closed";
   if (b.claimer_usernames.length > 0)
     return `👥claimed(${b.claimer_usernames[0]})`;
+  if (b.issue_github_assignees && b.issue_github_assignees.length > 0)
+    return `👥gh-assigned(${b.issue_github_assignees[0]})`;
   if (b.trying_usernames.length > 0)
     return `⏳trying(${b.trying_usernames.length})`;
-  return "🟢open";
+  if (b.issue_state === "open") return "🟢open";
+  return "❓";
 }
 
 function main() {
