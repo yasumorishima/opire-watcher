@@ -1,0 +1,885 @@
+[
+  {
+    "id": "01KEWXJ6FH5C2Z7XZVSG7TACJE",
+    "amount_usd": 48.22,
+    "title": "Request to execute qtop across two HPC clusters and apply first step of differential debugging",
+    "url": "https://github.com/qtop/qtop/issues/337",
+    "platform": "GitHub",
+    "org_name": "qtop",
+    "org_url": "https://github.com/qtop",
+    "project_name": "qtop",
+    "project_url": "https://github.com/qtop/qtop",
+    "project_repo_owner": "qtop",
+    "programming_languages": [
+      "Python"
+    ],
+    "claimer_usernames": [
+      "tani125"
+    ],
+    "trying_usernames": [
+      "tani125"
+    ],
+    "created_at": "2026-01-14T00:12:51.570Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01KDR8QS8J9YF0BJ3NCK0BTFZT",
+    "amount_usd": 40,
+    "title": "Implement ST7789 parallel protocol in PIO",
+    "url": "https://github.com/tinygo-org/pio/issues/38",
+    "platform": "GitHub",
+    "org_name": "tinygo-org",
+    "org_url": "https://github.com/tinygo-org",
+    "project_name": "pio",
+    "project_url": "https://github.com/tinygo-org/pio",
+    "project_repo_owner": "tinygo-org",
+    "programming_languages": [
+      "Go"
+    ],
+    "claimer_usernames": [
+      "maxx5ive"
+    ],
+    "trying_usernames": [
+      "maxx5ive"
+    ],
+    "created_at": "2025-12-30T18:36:14.994Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01KCKZCP14P37WZQZQA9W6BGJJ",
+    "amount_usd": 1620,
+    "title": "Donation/funding for german language",
+    "url": "https://github.com/hexgrad/kokoro/issues/290",
+    "platform": "GitHub",
+    "org_name": "hexgrad",
+    "org_url": "https://github.com/hexgrad",
+    "project_name": "kokoro",
+    "project_url": "https://github.com/hexgrad/kokoro",
+    "project_repo_owner": "hexgrad",
+    "programming_languages": [
+      "JavaScript"
+    ],
+    "claimer_usernames": [
+      "ashwinbalas",
+      "7vignesh",
+      "MAXSIXTO"
+    ],
+    "trying_usernames": [
+      "ashwinbalas",
+      "7vignesh",
+      "MAXSIXTO"
+    ],
+    "created_at": "2025-12-16T16:20:14.500Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01K9XSW1T5FY4DS4VMZ8NH98MP",
+    "amount_usd": 150,
+    "title": "Support for Ethernet peripheral (ESP32 / ESP32-P4)",
+    "url": "https://github.com/esp-rs/esp-hal/issues/4163",
+    "platform": "GitHub",
+    "org_name": "esp-rs",
+    "org_url": "https://github.com/esp-rs",
+    "project_name": "esp-hal",
+    "project_url": "https://github.com/esp-rs/esp-hal",
+    "project_repo_owner": "esp-rs",
+    "programming_languages": [
+      "Rust"
+    ],
+    "claimer_usernames": [
+      "itsdevrajchauhan"
+    ],
+    "trying_usernames": [
+      "itsdevrajchauhan"
+    ],
+    "created_at": "2025-11-13T05:09:05.477Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01K9AEB05K6XCMKMAVNB0P0FQ8",
+    "amount_usd": 20,
+    "title": "Image resize",
+    "url": "https://github.com/ArcaneCircle/pixelsocial/issues/3",
+    "platform": "GitHub",
+    "org_name": "ArcaneCircle",
+    "org_url": "https://github.com/ArcaneCircle",
+    "project_name": "pixelsocial",
+    "project_url": "https://github.com/ArcaneCircle/pixelsocial",
+    "project_repo_owner": "arcanecircle",
+    "programming_languages": [
+      "JavaScript"
+    ],
+    "claimer_usernames": [
+      "Aqil-Ahmad"
+    ],
+    "trying_usernames": [
+      "Aqil-Ahmad"
+    ],
+    "created_at": "2025-11-05T16:41:58.195Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01K6K4YTSWT7XF53GM3KCTBG7S",
+    "amount_usd": 100,
+    "title": "Tray icon should have an orange dot indicator",
+    "url": "https://github.com/aueangpanit/electron-template/issues/1",
+    "platform": "GitHub",
+    "org_name": "aueangpanit",
+    "org_url": "https://github.com/aueangpanit",
+    "project_name": "electron-template",
+    "project_url": "https://github.com/aueangpanit/electron-template",
+    "project_repo_owner": "aueangpanit",
+    "programming_languages": [
+      "TypeScript"
+    ],
+    "claimer_usernames": [
+      "RS-labhub",
+      "Mohitkumar6122"
+    ],
+    "trying_usernames": [
+      "RS-labhub",
+      "Mohitkumar6122"
+    ],
+    "created_at": "2025-10-02T19:04:06.716Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01K63CKS42SVTDTSWMV3DZC06Q",
+    "amount_usd": 100,
+    "title": "Crash",
+    "url": "https://github.com/FalkorDB/FalkorDB/issues/622",
+    "platform": "GitHub",
+    "org_name": "FalkorDB",
+    "org_url": "https://github.com/FalkorDB",
+    "project_name": "FalkorDB",
+    "project_url": "https://github.com/FalkorDB/FalkorDB",
+    "project_repo_owner": "falkordb",
+    "programming_languages": [
+      "C"
+    ],
+    "claimer_usernames": [
+      "Aqil-Ahmad"
+    ],
+    "trying_usernames": [
+      "Aqil-Ahmad",
+      "moneyyiiss"
+    ],
+    "created_at": "2025-09-26T16:10:02.242Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01K63CHGSHMNJV1FYE9F8TB8H3",
+    "amount_usd": 900,
+    "title": "Crash found in fuzzer",
+    "url": "https://github.com/FalkorDB/FalkorDB/issues/636",
+    "platform": "GitHub",
+    "org_name": "FalkorDB",
+    "org_url": "https://github.com/FalkorDB",
+    "project_name": "FalkorDB",
+    "project_url": "https://github.com/FalkorDB/FalkorDB",
+    "project_repo_owner": "falkordb",
+    "programming_languages": [
+      "C"
+    ],
+    "claimer_usernames": [
+      "adityajha2005",
+      "natinew77-creator",
+      "marchantdev",
+      "santosparra651-arch",
+      "gittare",
+      "marianskiimai-cloud"
+    ],
+    "trying_usernames": [
+      "adityajha2005",
+      "natinew77-creator",
+      "marchantdev",
+      "santosparra651-arch",
+      "gittare",
+      "marianskiimai-cloud"
+    ],
+    "created_at": "2025-09-26T16:08:48.177Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01K16ZAX52F6EFS2VKN6BS2DVD",
+    "amount_usd": 200,
+    "title": "Replace tut with doctest",
+    "url": "https://github.com/secondlife/viewer/issues/4445",
+    "platform": "GitHub",
+    "org_name": "secondlife",
+    "org_url": "https://github.com/secondlife",
+    "project_name": "viewer",
+    "project_url": "https://github.com/secondlife/viewer",
+    "project_repo_owner": "secondlife",
+    "programming_languages": [
+      "C++",
+      "C",
+      "GLSL"
+    ],
+    "claimer_usernames": [
+      "JulianJulius"
+    ],
+    "trying_usernames": [
+      "JulianJulius",
+      "mayconbekkers",
+      "CHIRANJEET1729DAS",
+      "DeekRoumy",
+      "sidneisilvadev",
+      "lx277856602"
+    ],
+    "created_at": "2025-07-27T22:16:28.578Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01JYY6Y3VD3NR0104WDMWC20AZ",
+    "amount_usd": 20,
+    "title": "Images on the bottom of level up messages",
+    "url": "https://github.com/buape/kiai-bounties/issues/1",
+    "platform": "GitHub",
+    "org_name": "buape",
+    "org_url": "https://github.com/buape",
+    "project_name": "kiai-bounties",
+    "project_url": "https://github.com/buape/kiai-bounties",
+    "project_repo_owner": "buape",
+    "programming_languages": [],
+    "claimer_usernames": [],
+    "trying_usernames": [],
+    "created_at": "2025-06-29T16:04:44.526Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01JT4GSE9HNA2F60J4VKYCMHP5",
+    "amount_usd": 20,
+    "title": "CPU usage 4x higher in ROS 2 than ROS 1",
+    "url": "https://github.com/mavlink/mavros/issues/2031",
+    "platform": "GitHub",
+    "org_name": "mavlink",
+    "org_url": "https://github.com/mavlink",
+    "project_name": "mavros",
+    "project_url": "https://github.com/mavlink/mavros",
+    "project_repo_owner": "mavlink",
+    "programming_languages": [
+      "C++"
+    ],
+    "claimer_usernames": [
+      "faizan-185"
+    ],
+    "trying_usernames": [
+      "faizan-185"
+    ],
+    "created_at": "2025-04-30T23:33:54.609Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01JPA7XMYJCAXV83EF0GEKTTZH",
+    "amount_usd": 40,
+    "title": "feat(Universal patch): microG / GmsCore universal patch",
+    "url": "https://github.com/ReVanced/revanced-patches/issues/1583",
+    "platform": "GitHub",
+    "org_name": "ReVanced",
+    "org_url": "https://github.com/ReVanced",
+    "project_name": "revanced-patches",
+    "project_url": "https://github.com/ReVanced/revanced-patches",
+    "project_repo_owner": "revanced",
+    "programming_languages": [
+      "Kotlin"
+    ],
+    "claimer_usernames": [
+      "subhra-io"
+    ],
+    "trying_usernames": [
+      "subhra-io"
+    ],
+    "created_at": "2025-03-14T11:51:34.610Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01JN06N9GS8Q1KB2NJ318258HR",
+    "amount_usd": 1500,
+    "title": "Asynchronous Web APIs",
+    "url": "https://github.com/uswriting/zeroperl/issues/7",
+    "platform": "GitHub",
+    "org_name": "uswriting",
+    "org_url": "https://github.com/uswriting",
+    "project_name": "zeroperl",
+    "project_url": "https://github.com/uswriting/zeroperl",
+    "project_repo_owner": "uswriting",
+    "programming_languages": [
+      "C"
+    ],
+    "claimer_usernames": [],
+    "trying_usernames": [],
+    "created_at": "2025-02-26T04:01:26.041Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01JJJDVER78MF2EZ313058AF2Q",
+    "amount_usd": 20,
+    "title": "SSTV RX",
+    "url": "https://github.com/portapack-mayhem/mayhem-firmware/issues/2045",
+    "platform": "GitHub",
+    "org_name": "portapack-mayhem",
+    "org_url": "https://github.com/portapack-mayhem",
+    "project_name": "mayhem-firmware",
+    "project_url": "https://github.com/portapack-mayhem/mayhem-firmware",
+    "project_repo_owner": "portapack-mayhem",
+    "programming_languages": [
+      "C"
+    ],
+    "claimer_usernames": [
+      "bamiebot-maker"
+    ],
+    "trying_usernames": [
+      "bamiebot-maker"
+    ],
+    "created_at": "2025-01-26T23:06:22.343Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01JH00AXGKW2B660P4QE078RKC",
+    "amount_usd": 20,
+    "title": "Nest js icons",
+    "url": "https://github.com/tal7aouy/vscode-icons/issues/87",
+    "platform": "GitHub",
+    "org_name": "pwvux",
+    "org_url": "https://github.com/pwvux",
+    "project_name": "vscode-icons",
+    "project_url": "https://github.com/m4zexyz/vscode-icons",
+    "project_repo_owner": "m4zexyz",
+    "programming_languages": [
+      "TypeScript"
+    ],
+    "claimer_usernames": [
+      "ArtificialXDev"
+    ],
+    "trying_usernames": [
+      "ArtificialXDev"
+    ],
+    "created_at": "2025-01-07T09:08:07.315Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01JCPC4RSRT5Q6A9PC3CTMFZJR",
+    "amount_usd": 40,
+    "title": "Is there a matrix size limit?",
+    "url": "https://github.com/RichieHakim/sparse_convolution/issues/1",
+    "platform": "GitHub",
+    "org_name": "RichieHakim",
+    "org_url": "https://github.com/RichieHakim",
+    "project_name": "sparse_convolution",
+    "project_url": "https://github.com/RichieHakim/sparse_convolution",
+    "project_repo_owner": "richiehakim",
+    "programming_languages": [
+      "Python"
+    ],
+    "claimer_usernames": [
+      "RichieHakim",
+      "GrandTheftWalrus",
+      "HAMZA-NEDJIMA",
+      "AugustFriebolin",
+      "maurobeltrami"
+    ],
+    "trying_usernames": [
+      "RichieHakim",
+      "GrandTheftWalrus",
+      "HAMZA-NEDJIMA",
+      "AugustFriebolin",
+      "maurobeltrami"
+    ],
+    "created_at": "2024-11-14T22:19:17.177Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01JARC75G44M6EQCJCR1DTBHD6",
+    "amount_usd": 60,
+    "title": "[BUG] Internal Server Errors still shows success toast",
+    "url": "https://github.com/formbricks/formbricks/issues/3302",
+    "platform": "GitHub",
+    "org_name": "formbricks",
+    "org_url": "https://github.com/formbricks",
+    "project_name": "formbricks",
+    "project_url": "https://github.com/formbricks/formbricks",
+    "project_repo_owner": "formbricks",
+    "programming_languages": [
+      "TypeScript"
+    ],
+    "claimer_usernames": [
+      "Ankit-Matth",
+      "AndresAIFR",
+      "Robert0303-C"
+    ],
+    "trying_usernames": [
+      "Ankit-Matth",
+      "AndresAIFR",
+      "Robert0303-C"
+    ],
+    "created_at": "2024-10-21T20:27:40.932Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01J8YJ06HPSY7ZAMAW08T83YBD",
+    "amount_usd": 13380,
+    "title": "Readd support for web platform exports when using the C# (.NET) version of the engine",
+    "url": "https://github.com/godotengine/godot/issues/70796",
+    "platform": "GitHub",
+    "org_name": "godotengine",
+    "org_url": "https://github.com/godotengine",
+    "project_name": "godot",
+    "project_url": "https://github.com/godotengine/godot",
+    "project_repo_owner": "godotengine",
+    "programming_languages": [
+      "C++"
+    ],
+    "claimer_usernames": [
+      "Enrique726",
+      "Eliene-byte",
+      "sreegithub89",
+      "santosparra651-arch"
+    ],
+    "trying_usernames": [
+      "Enrique726",
+      "Eliene-byte",
+      "sreegithub89",
+      "santosparra651-arch"
+    ],
+    "created_at": "2024-09-29T09:32:47.030Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01J8T24PJDXX69RM7XV24SQT11",
+    "amount_usd": 70,
+    "title": "feat: view test coverage in editor",
+    "url": "https://github.com/denoland/deno/issues/18147",
+    "platform": "GitHub",
+    "org_name": "denoland",
+    "org_url": "https://github.com/denoland",
+    "project_name": "deno",
+    "project_url": "https://github.com/denoland/deno",
+    "project_repo_owner": "denoland",
+    "programming_languages": [
+      "Rust"
+    ],
+    "claimer_usernames": [
+      "Robert0303-C"
+    ],
+    "trying_usernames": [
+      "Robert0303-C"
+    ],
+    "created_at": "2024-09-27T15:38:39.565Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01J8NCWJBS24GDWTCAQEK16PVK",
+    "amount_usd": 200,
+    "title": "[FEATURE] Adding \"collaborators\" to a task (formerly: Assign tasks to multiple members)",
+    "url": "https://github.com/Leantime/leantime/issues/1099",
+    "platform": "GitHub",
+    "org_name": "Leantime",
+    "org_url": "https://github.com/Leantime",
+    "project_name": "leantime",
+    "project_url": "https://github.com/Leantime/leantime",
+    "project_repo_owner": "leantime",
+    "programming_languages": [
+      "PHP"
+    ],
+    "claimer_usernames": [
+      "Akashsah2003",
+      "plyght",
+      "juarezsousa-ctrl",
+      "Robert0303-C"
+    ],
+    "trying_usernames": [
+      "Akashsah2003",
+      "plyght",
+      "juarezsousa-ctrl",
+      "Robert0303-C"
+    ],
+    "created_at": "2024-09-25T20:10:15.289Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01J8898W2WES9F4FJ57GDG0BYS",
+    "amount_usd": 45,
+    "title": "incorrect code-hinter header text",
+    "url": "https://github.com/ToolJet/ToolJet/issues/6655",
+    "platform": "GitHub",
+    "org_name": "ToolJet",
+    "org_url": "https://github.com/ToolJet",
+    "project_name": "ToolJet",
+    "project_url": "https://github.com/ToolJet/ToolJet",
+    "project_repo_owner": "tooljet",
+    "programming_languages": [
+      "JavaScript"
+    ],
+    "claimer_usernames": [
+      "zeeshan1212",
+      "DeepakStarkz",
+      "TheodorNEngoy",
+      "tommythekatzo-cell"
+    ],
+    "trying_usernames": [
+      "zeeshan1212",
+      "DeepakStarkz",
+      "TheodorNEngoy",
+      "tommythekatzo-cell"
+    ],
+    "created_at": "2024-09-20T17:56:56.540Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01J73BXYSGA83XKW25TPF2QMK0",
+    "amount_usd": 350,
+    "title": "Add Wayland support",
+    "url": "https://github.com/autokey/autokey/issues/87",
+    "platform": "GitHub",
+    "org_name": "autokey",
+    "org_url": "https://github.com/autokey",
+    "project_name": "autokey",
+    "project_url": "https://github.com/autokey/autokey",
+    "project_repo_owner": "autokey",
+    "programming_languages": [
+      "Python"
+    ],
+    "claimer_usernames": [
+      "abdulmajeedsualihu",
+      "promisingcoder",
+      "swjcpy",
+      "Kiki-bo-zhang",
+      "vildanden-ai",
+      "Robert0303-C"
+    ],
+    "trying_usernames": [
+      "abdulmajeedsualihu",
+      "promisingcoder",
+      "movassaghi6",
+      "ankitgujral7",
+      "AliAmouz",
+      "Preetam-77",
+      "swjcpy",
+      "Kiki-bo-zhang",
+      "vildanden-ai",
+      "sidneisilvadev",
+      "nonamehereilp",
+      "Robert0303-C",
+      "vinishdas"
+    ],
+    "created_at": "2024-09-06T09:51:30.609Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01J6HJZCK02FVD4XG900FY36EE",
+    "amount_usd": 345,
+    "title": "Helix keymap",
+    "url": "https://github.com/zed-industries/zed/issues/4642",
+    "platform": "GitHub",
+    "org_name": "zed-industries",
+    "org_url": "https://github.com/zed-industries",
+    "project_name": "zed",
+    "project_url": "https://github.com/zed-industries/zed",
+    "project_repo_owner": "zed-industries",
+    "programming_languages": [
+      "Rust"
+    ],
+    "claimer_usernames": [
+      "ROOCKY-dev",
+      "santosparra651-arch",
+      "sethstha"
+    ],
+    "trying_usernames": [
+      "ROOCKY-dev",
+      "santosparra651-arch",
+      "sethstha"
+    ],
+    "created_at": "2024-08-30T12:08:17.760Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01J42C08V4J78ZAWH8JH2RQS8G",
+    "amount_usd": 42,
+    "title": "research implementation for Windows",
+    "url": "https://github.com/radumarias/rencfs/issues/3",
+    "platform": "GitHub",
+    "org_name": "radumarias",
+    "org_url": "https://github.com/radumarias",
+    "project_name": "rencfs",
+    "project_url": "https://github.com/radumarias/rencfs",
+    "project_repo_owner": "radumarias",
+    "programming_languages": [
+      "Rust"
+    ],
+    "claimer_usernames": [],
+    "trying_usernames": [],
+    "created_at": "2024-07-30T17:46:26.532Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01J0Y2SDJ86WRYJAYMMZJBFBAJ",
+    "amount_usd": 200,
+    "title": "External IDP tokens are not refreshed automatically for OAuth2 & OIDC IDPs when retrieving the external token",
+    "url": "https://github.com/keycloak/keycloak/issues/14644",
+    "platform": "GitHub",
+    "org_name": "keycloak",
+    "org_url": "https://github.com/keycloak",
+    "project_name": "keycloak",
+    "project_url": "https://github.com/keycloak/keycloak",
+    "project_repo_owner": "keycloak",
+    "programming_languages": [
+      "Java"
+    ],
+    "claimer_usernames": [
+      "Bademeischta"
+    ],
+    "trying_usernames": [
+      "Bademeischta"
+    ],
+    "created_at": "2024-06-21T19:01:21.608Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01HWX4P9F1935V3ZXN4TY7VDEQ",
+    "amount_usd": 50,
+    "title": "Improve error when configured code coverage file list is empty",
+    "url": "https://github.com/sebastianbergmann/phpunit/issues/4440",
+    "platform": "GitHub",
+    "org_name": "sebastianbergmann",
+    "org_url": "https://github.com/sebastianbergmann",
+    "project_name": "phpunit",
+    "project_url": "https://github.com/sebastianbergmann/phpunit",
+    "project_repo_owner": "sebastianbergmann",
+    "programming_languages": [
+      "PHP"
+    ],
+    "claimer_usernames": [
+      "syedhusnainaliskillrextech",
+      "SeeTheRianBow",
+      "Robert0303-C"
+    ],
+    "trying_usernames": [
+      "syedhusnainaliskillrextech",
+      "SeeTheRianBow",
+      "Robert0303-C"
+    ],
+    "created_at": "2024-05-02T17:12:34.529Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01HWT2MKE4GWPJXDPMAFEAHHHE",
+    "amount_usd": 30,
+    "title": "[V4] QueryEngine - deleteMany not working when filter by nested entity.",
+    "url": "https://github.com/strapi/strapi/issues/11998",
+    "platform": "GitHub",
+    "org_name": "strapi",
+    "org_url": "https://github.com/strapi",
+    "project_name": "strapi",
+    "project_url": "https://github.com/strapi/strapi",
+    "project_repo_owner": "strapi",
+    "programming_languages": [
+      "TypeScript"
+    ],
+    "claimer_usernames": [
+      "sudo-verse"
+    ],
+    "trying_usernames": [
+      "sudo-verse"
+    ],
+    "created_at": "2024-05-01T12:38:58.756Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01HWT26R3S59MS778MAE9786YG",
+    "amount_usd": 110,
+    "title": "Problem with storybook-controls of type \"select\"",
+    "url": "https://github.com/storybookjs/storybook/issues/12641",
+    "platform": "GitHub",
+    "org_name": "storybookjs",
+    "org_url": "https://github.com/storybookjs",
+    "project_name": "storybook",
+    "project_url": "https://github.com/storybookjs/storybook",
+    "project_repo_owner": "storybookjs",
+    "programming_languages": [
+      "TypeScript"
+    ],
+    "claimer_usernames": [
+      "lau90eth"
+    ],
+    "trying_usernames": [
+      "lau90eth"
+    ],
+    "created_at": "2024-05-01T12:31:24.793Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01HWR51JFNKM63CH4NS657FSCD",
+    "amount_usd": 70,
+    "title": "Octocrab doesn't compile with Yew (for me)",
+    "url": "https://github.com/XAMPPRocky/octocrab/issues/224",
+    "platform": "GitHub",
+    "org_name": "XAMPPRocky",
+    "org_url": "https://github.com/XAMPPRocky",
+    "project_name": "octocrab",
+    "project_url": "https://github.com/XAMPPRocky/octocrab",
+    "project_repo_owner": "xampprocky",
+    "programming_languages": [
+      "Rust"
+    ],
+    "claimer_usernames": [
+      "sanks011"
+    ],
+    "trying_usernames": [
+      "sanks011"
+    ],
+    "created_at": "2024-04-30T18:42:32.053Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01HWJNZ5HQMVG2TCW6XHQQJ3QT",
+    "amount_usd": 120,
+    "title": "Migration generation drops and creates columns instead of altering resulting in data loss",
+    "url": "https://github.com/typeorm/typeorm/issues/3357",
+    "platform": "GitHub",
+    "org_name": "typeorm",
+    "org_url": "https://github.com/typeorm",
+    "project_name": "typeorm",
+    "project_url": "https://github.com/typeorm/typeorm",
+    "project_repo_owner": "typeorm",
+    "programming_languages": [
+      "TypeScript"
+    ],
+    "claimer_usernames": [
+      "Rafael-rgsousa",
+      "TheodorNEngoy",
+      "elskow",
+      "Sam-wiz",
+      "natinew77-creator",
+      "GhostDragonAlpha",
+      "hruss-software",
+      "Robert0303-C"
+    ],
+    "trying_usernames": [
+      "Rafael-rgsousa",
+      "TheodorNEngoy",
+      "elskow",
+      "Sam-wiz",
+      "natinew77-creator",
+      "GhostDragonAlpha",
+      "hruss-software",
+      "Robert0303-C"
+    ],
+    "created_at": "2024-04-28T15:42:52.471Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01HWAKVG8489QKN1NEGQA2RJC4",
+    "amount_usd": 50,
+    "title": "Supply-chain: Review or rewrite the busboy library.",
+    "url": "https://github.com/bogeeee/restfuncs/issues/6",
+    "platform": "GitHub",
+    "org_name": "bogeeee",
+    "org_url": "https://github.com/bogeeee",
+    "project_name": "restfuncs",
+    "project_url": "https://github.com/bogeeee/restfuncs",
+    "project_repo_owner": "bogeeee",
+    "programming_languages": [
+      "TypeScript"
+    ],
+    "claimer_usernames": [
+      "Robert0303-C"
+    ],
+    "trying_usernames": [
+      "sonpt-afk",
+      "AbdellahGo",
+      "IdgyMyName",
+      "satvik2131",
+      "eduardtorosya07",
+      "Waryjustice",
+      "KaustubhOG",
+      "sidneisilvadev",
+      "Robert0303-C"
+    ],
+    "created_at": "2024-04-25T12:31:59.748Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01HW8CK374Y67WDDZG22BYVZQ4",
+    "amount_usd": 80,
+    "title": "500 Server Error - Auto Solve hcapcha",
+    "url": "https://github.com/flowese/UdioWrapper/issues/7",
+    "platform": "GitHub",
+    "org_name": "flowese",
+    "org_url": "https://github.com/flowese",
+    "project_name": "UdioWrapper",
+    "project_url": "https://github.com/flowese/UdioWrapper",
+    "project_repo_owner": "flowese",
+    "programming_languages": [
+      "Python"
+    ],
+    "claimer_usernames": [
+      "TintinSDev",
+      "williamjie777"
+    ],
+    "trying_usernames": [
+      "TintinSDev",
+      "javarcompany",
+      "onish-cmd",
+      "sandip22890",
+      "sidneisilvadev",
+      "williamjie777"
+    ],
+    "created_at": "2024-04-24T15:46:35.364Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  },
+  {
+    "id": "01HTN11YX5NYSS7GGB3SHNCJSS",
+    "amount_usd": 70,
+    "title": "Open target URLs not in PWA but in default browser",
+    "url": "https://github.com/trovu/trovu/issues/329",
+    "platform": "GitHub",
+    "org_name": "trovu",
+    "org_url": "https://github.com/trovu",
+    "project_name": "trovu",
+    "project_url": "https://github.com/trovu/trovu",
+    "project_repo_owner": "trovu",
+    "programming_languages": [
+      "TypeScript",
+      "JavaScript",
+      "HTML"
+    ],
+    "claimer_usernames": [
+      "MindfulPol",
+      "iamnomercy64",
+      "krshhn",
+      "TheodorNEngoy",
+      "sg-surya",
+      "Jhon-Crow",
+      "1028bc",
+      "codejupiter"
+    ],
+    "trying_usernames": [
+      "EstephanoDev",
+      "DyxBenjamin",
+      "torresgol10",
+      "MindfulPol",
+      "Ky210299",
+      "iamnomercy64",
+      "optimusprimecode",
+      "krshhn",
+      "hellozzm",
+      "arc-bluezy",
+      "hmohammed",
+      "rahul-754",
+      "Saboor100",
+      "TheodorNEngoy",
+      "ishanraj953",
+      "sg-surya",
+      "ava-sig",
+      "Qwerty-2308",
+      "imsurajj",
+      "Jhon-Crow",
+      "1028bc",
+      "codejupiter",
+      "sidneisilvadev"
+    ],
+    "created_at": "2024-04-04T17:03:43.525Z",
+    "fetched_at": "2026-04-15T13:44:58.932Z"
+  }
+]
