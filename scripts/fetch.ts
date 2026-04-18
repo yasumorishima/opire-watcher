@@ -23,6 +23,15 @@ type Bounty = {
   issue_state?: "open" | "closed" | "unknown";
   issue_github_assignees?: string[];
   availability_checked_at?: string;
+  progress_signals?: ProgressSignals;
+};
+
+type ProgressSignals = {
+  linked_prs: string[];
+  try_commenters: string[];
+  working_commenters: string[];
+  last_activity: string | null;
+  verdict: "likely_taken" | "contested" | "open";
 };
 
 async function checkIssue(
@@ -49,6 +58,80 @@ async function checkIssue(
     };
   } catch {
     return { state: "unknown", assignees: [] };
+  }
+}
+
+export async function fetchIssueProgress(
+  url: string | null,
+  token: string | undefined,
+): Promise<ProgressSignals | null> {
+  if (!url) return null;
+  const m = url.match(/github\.com\/([^/]+)\/([^/]+)\/issues\/(\d+)/i);
+  if (!m) return null;
+  const [, owner, repo, num] = m;
+  const headers = {
+    "user-agent": "opire-watcher",
+    accept: "application/vnd.github+json",
+    ...(token ? { authorization: `Bearer ${token}` } : {}),
+  };
+  try {
+    const [issueRes, commentsRes] = await Promise.all([
+      fetch(`https://api.github.com/repos/${owner}/${repo}/issues/${num}`, { headers }),
+      fetch(
+        `https://api.github.com/repos/${owner}/${repo}/issues/${num}/comments?per_page=100`,
+        { headers },
+      ),
+    ]);
+    if (!issueRes.ok || !commentsRes.ok) return null;
+    const issue = (await issueRes.json()) as any;
+    const comments = (await commentsRes.json()) as any[];
+
+    const texts: { author: string; body: string; at: string }[] = [
+      { author: issue.user?.login ?? "?", body: issue.body ?? "", at: issue.created_at },
+      ...comments.map((c: any) => ({
+        author: c.user?.login ?? "?",
+        body: c.body ?? "",
+        at: c.created_at,
+      })),
+    ];
+
+    const prRe =
+      /https?:\/\/github\.com\/[\w.-]+\/[\w.-]+\/pull\/\d+|(?<![\w-])#(\d+)\b/g;
+    const linkedPrs = new Set<string>();
+    const tryCommenters = new Set<string>();
+    const workingCommenters = new Set<string>();
+    let lastActivity: string | null = null;
+
+    const tryRe = /(^|\s)\/(try|attempt|claim)\b/i;
+    const workingRe =
+      /\b(working on (this|it)|i'?ll (take|work on|handle|do) (this|it)|assign (this|it|me)|on it|taking this|pick(ing)? this up|raised (a )?pr|opened (a )?pr|my pr|will (submit|create|open) (a )?pr|i am working)\b/i;
+
+    for (const t of texts) {
+      if (!t.at) continue;
+      if (!lastActivity || t.at > lastActivity) lastActivity = t.at;
+      const body = t.body || "";
+      const matches = body.match(prRe);
+      if (matches) for (const m of matches) linkedPrs.add(m);
+      if (tryRe.test(body)) tryCommenters.add(t.author);
+      if (workingRe.test(body)) workingCommenters.add(t.author);
+    }
+
+    const hasRealPr = [...linkedPrs].some((p) => p.includes("/pull/"));
+    const verdict: ProgressSignals["verdict"] = hasRealPr
+      ? "likely_taken"
+      : workingCommenters.size > 0 || tryCommenters.size >= 3
+        ? "contested"
+        : "open";
+
+    return {
+      linked_prs: [...linkedPrs],
+      try_commenters: [...tryCommenters],
+      working_commenters: [...workingCommenters],
+      last_activity: lastActivity,
+      verdict,
+    };
+  } catch {
+    return null;
   }
 }
 
@@ -128,6 +211,17 @@ async function main() {
         b.availability_checked_at = p.availability_checked_at;
       }
     }
+  }
+
+  const newIds = new Set(newOnes.map((b) => b.id));
+  for (const b of bounties) {
+    if (!newIds.has(b.id)) continue;
+    const signals = await fetchIssueProgress(b.url, ghToken);
+    if (signals) b.progress_signals = signals;
+  }
+  for (const b of newOnes) {
+    const match = bounties.find((x) => x.id === b.id);
+    if (match?.progress_signals) b.progress_signals = match.progress_signals;
   }
 
   const merged = [
