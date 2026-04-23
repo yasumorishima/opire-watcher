@@ -15,7 +15,7 @@ Periodic snapshot of open bounties on [Opire](https://opire.dev).
 
 _Last updated: 2026-04-23_
 
-**Tracked total:** 33 / **$20,110.22** | **Candidates:** 0 / **$0**
+**Tracked total:** 36 / **$20,260.22** | **Candidates:** 0 / **$0**
 
 ### 🟢 Candidates (CANDIDATE + CAUTION, by reward)
 
@@ -35,25 +35,28 @@ _none right now_
 
 | Language | Count | Total |
 | --- | ---: | ---: |
-| C++ | 3 | $13,600 |
+| C++ | 4 | $13,670 |
 | C | 5 | $2,720 |
 | JavaScript | 4 | $1,755 |
 | Rust | 5 | $677 |
 | TypeScript | 8 | $560 |
 | Python | 4 | $518.22 |
+| Java | 3 | $280 |
 | PHP | 2 | $250 |
-| GLSL | 1 | $200 |
 
 ### Latest 20 (with verdict)
 
+- ❓UNKNOWN **$70** — [macOS: dialog.showOpenDialog fails to show custom macOS packages (LSTypeIsPackage) when filtered by extension in Electron 36.2.0+ (worked in 35.7.5; 36.0.0 showed all files)](https://github.com/electron/electron/issues/48191) *(electron)*
+- ❓UNKNOWN **$50** — [[BOUNTY] WearOS Support [$1340]](https://github.com/microg/GmsCore/issues/2843) *(microg)*
+- ❓UNKNOWN **$30** — [[BOUNTY] RCS Support [14999$]](https://github.com/microg/GmsCore/issues/2994) *(microg)*
 - 🔴AVOID **$48.22** — [Request to execute qtop across two HPC clusters and apply first step of differential debugging](https://github.com/qtop/qtop/issues/337) *(qtop)*
 - 🔴AVOID **$40** — [Implement ST7789 parallel protocol in PIO](https://github.com/tinygo-org/pio/issues/38) *(tinygo-org)*
 - 🔴AVOID (3att/7pr) **$1,620** — [Donation/funding for german language](https://github.com/hexgrad/kokoro/issues/290) *(hexgrad)*
 - 🔴AVOID (0att/3pr) **$150** — [Support for Ethernet peripheral (ESP32 / ESP32-P4)](https://github.com/esp-rs/esp-hal/issues/4163) *(esp-rs)*
 - 🔴AVOID **$20** — [Image resize](https://github.com/ArcaneCircle/pixelsocial/issues/3) *(ArcaneCircle)*
 - 🔴AVOID **$100** — [Tray icon should have an orange dot indicator](https://github.com/aueangpanit/electron-template/issues/1) *(aueangpanit)*
-- 🔴AVOID **$100** — [Crash](https://github.com/FalkorDB/FalkorDB/issues/622) *(FalkorDB)*
-- 🔴AVOID (0att/13pr) **$900** — [Crash found in fuzzer](https://github.com/FalkorDB/FalkorDB/issues/636) *(FalkorDB)*
+- 🔴AVOID (0att/1pr) **$100** — [Crash](https://github.com/FalkorDB/FalkorDB/issues/622) *(FalkorDB)*
+- 🔴AVOID (0att/15pr) **$900** — [Crash found in fuzzer](https://github.com/FalkorDB/FalkorDB/issues/636) *(FalkorDB)*
 - 🔴AVOID (1att/7pr) **$200** — [Replace tut with doctest](https://github.com/secondlife/viewer/issues/4445) *(secondlife)*
 - ❓UNKNOWN **$20** — [Images on the bottom of level up messages](https://github.com/buape/kiai-bounties/issues/1) *(buape)*
 - 🔴AVOID **$20** — [CPU usage 4x higher in ROS 2 than ROS 1](https://github.com/mavlink/mavros/issues/2031) *(mavlink)*
@@ -63,9 +66,6 @@ _none right now_
 - 🔴AVOID **$20** — [Nest js icons](https://github.com/tal7aouy/vscode-icons/issues/87) *(pwvux)*
 - 🔴AVOID **$40** — [Is there a matrix size limit?](https://github.com/RichieHakim/sparse_convolution/issues/1) *(RichieHakim)*
 - 🔴AVOID **$60** — [[BUG] Internal Server Errors still shows success toast](https://github.com/formbricks/formbricks/issues/3302) *(formbricks)*
-- 🔴AVOID (0att/9pr) **$13,380** — [Readd support for web platform exports when using the C# (.NET) version of the engine](https://github.com/godotengine/godot/issues/70796) *(godotengine)*
-- 🔴AVOID **$70** — [feat: view test coverage in editor](https://github.com/denoland/deno/issues/18147) *(denoland)*
-- 🔴AVOID (0att/2pr) **$200** — [[FEATURE] Adding "collaborators" to a task (formerly: Assign tasks to multiple members)](https://github.com/Leantime/leantime/issues/1099) *(Leantime)*
 
 <!-- stats-end -->
 
