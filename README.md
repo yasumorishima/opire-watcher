@@ -46,10 +46,10 @@ _none right now_
 
 ### Latest 20 (with verdict)
 
-- ❓UNKNOWN **$70** — [macOS: dialog.showOpenDialog fails to show custom macOS packages (LSTypeIsPackage) when filtered by extension in Electron 36.2.0+ (worked in 35.7.5; 36.0.0 showed all files)](https://github.com/electron/electron/issues/48191) *(electron)*
+- 🔴AVOID (0att/8pr) **$70** — [macOS: dialog.showOpenDialog fails to show custom macOS packages (LSTypeIsPackage) when filtered by extension in Electron 36.2.0+ (worked in 35.7.5; 36.0.0 showed all files)](https://github.com/electron/electron/issues/48191) *(electron)*
 - ❓UNKNOWN **$50** — [[BOUNTY] WearOS Support [$1340]](https://github.com/microg/GmsCore/issues/2843) *(microg)*
 - ❓UNKNOWN **$30** — [[BOUNTY] RCS Support [14999$]](https://github.com/microg/GmsCore/issues/2994) *(microg)*
-- 🔴AVOID **$48.22** — [Request to execute qtop across two HPC clusters and apply first step of differential debugging](https://github.com/qtop/qtop/issues/337) *(qtop)*
+- 🔴AVOID (0att/4pr) **$48.22** — [Request to execute qtop across two HPC clusters and apply first step of differential debugging](https://github.com/qtop/qtop/issues/337) *(qtop)*
 - 🔴AVOID **$40** — [Implement ST7789 parallel protocol in PIO](https://github.com/tinygo-org/pio/issues/38) *(tinygo-org)*
 - 🔴AVOID (3att/7pr) **$1,620** — [Donation/funding for german language](https://github.com/hexgrad/kokoro/issues/290) *(hexgrad)*
 - 🔴AVOID (0att/3pr) **$150** — [Support for Ethernet peripheral (ESP32 / ESP32-P4)](https://github.com/esp-rs/esp-hal/issues/4163) *(esp-rs)*
@@ -64,8 +64,8 @@ _none right now_
 - 🔴AVOID (0att/3pr) **$1,500** — [Asynchronous Web APIs](https://github.com/uswriting/zeroperl/issues/7) *(uswriting)*
 - 🔴AVOID **$20** — [SSTV RX](https://github.com/portapack-mayhem/mayhem-firmware/issues/2045) *(portapack-mayhem)*
 - 🔴AVOID **$20** — [Nest js icons](https://github.com/tal7aouy/vscode-icons/issues/87) *(pwvux)*
-- 🔴AVOID **$40** — [Is there a matrix size limit?](https://github.com/RichieHakim/sparse_convolution/issues/1) *(RichieHakim)*
-- 🔴AVOID **$60** — [[BUG] Internal Server Errors still shows success toast](https://github.com/formbricks/formbricks/issues/3302) *(formbricks)*
+- 🔴AVOID (0att/4pr) **$40** — [Is there a matrix size limit?](https://github.com/RichieHakim/sparse_convolution/issues/1) *(RichieHakim)*
+- 🔴AVOID (0att/12pr) **$60** — [[BUG] Internal Server Errors still shows success toast](https://github.com/formbricks/formbricks/issues/3302) *(formbricks)*
 
 <!-- stats-end -->
 
