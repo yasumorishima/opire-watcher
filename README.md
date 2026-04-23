@@ -15,12 +15,11 @@ Periodic snapshot of open bounties on [Opire](https://opire.dev).
 
 _Last updated: 2026-04-23_
 
-**Tracked total:** 33 / **$20,110.22** | **Candidates:** 2 / **$62**
+**Tracked total:** 33 / **$20,110.22** | **Candidates:** 0 / **$0**
 
 ### 🟢 Candidates (CANDIDATE + CAUTION, by reward)
 
-- **$42** — [research implementation for Windows](https://github.com/radumarias/rencfs/issues/3) *(radumarias)* `Rust`
-- **$20** — [Images on the bottom of level up messages](https://github.com/buape/kiai-bounties/issues/1) *(buape)*
+_none right now_
 
 ### Top repos (by total reward)
 
@@ -53,10 +52,10 @@ _Last updated: 2026-04-23_
 - 🔴AVOID (0att/3pr) **$150** — [Support for Ethernet peripheral (ESP32 / ESP32-P4)](https://github.com/esp-rs/esp-hal/issues/4163) *(esp-rs)*
 - 🔴AVOID **$20** — [Image resize](https://github.com/ArcaneCircle/pixelsocial/issues/3) *(ArcaneCircle)*
 - 🔴AVOID **$100** — [Tray icon should have an orange dot indicator](https://github.com/aueangpanit/electron-template/issues/1) *(aueangpanit)*
-- 🔴AVOID **$100** — [Crash](https://github.com/FalkorDB/FalkorDB/issues/622) *(FalkorDB)*
+- 🔴AVOID (0att/1pr) **$100** — [Crash](https://github.com/FalkorDB/FalkorDB/issues/622) *(FalkorDB)*
 - 🔴AVOID (0att/13pr) **$900** — [Crash found in fuzzer](https://github.com/FalkorDB/FalkorDB/issues/636) *(FalkorDB)*
 - 🔴AVOID (1att/7pr) **$200** — [Replace tut with doctest](https://github.com/secondlife/viewer/issues/4445) *(secondlife)*
-- 🟢CANDIDATE **$20** — [Images on the bottom of level up messages](https://github.com/buape/kiai-bounties/issues/1) *(buape)*
+- ❓UNKNOWN **$20** — [Images on the bottom of level up messages](https://github.com/buape/kiai-bounties/issues/1) *(buape)*
 - 🔴AVOID **$20** — [CPU usage 4x higher in ROS 2 than ROS 1](https://github.com/mavlink/mavros/issues/2031) *(mavlink)*
 - 🔴AVOID **$40** — [feat(Universal patch): microG / GmsCore universal patch](https://github.com/ReVanced/revanced-patches/issues/1583) *(ReVanced)*
 - 🔴AVOID (0att/3pr) **$1,500** — [Asynchronous Web APIs](https://github.com/uswriting/zeroperl/issues/7) *(uswriting)*
