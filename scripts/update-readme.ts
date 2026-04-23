@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
+type Verdict = "AVOID" | "REDOCEAN" | "CAUTION" | "CANDIDATE" | "UNKNOWN";
 type Bounty = {
   id: string;
   amount_usd: number;
@@ -14,15 +15,24 @@ type Bounty = {
   trying_usernames: string[];
   created_at: string | null;
   issue_state?: "open" | "closed" | "unknown";
-  issue_github_assignees?: string[];
+  issue_assignees?: string[];
+  attempt_count?: number;
+  existing_pr_count?: number;
+  gating_flags?: string[];
+  verdict?: Verdict;
 };
 
-function isAvailable(b: Bounty): boolean {
-  if (b.issue_state === "closed") return false;
-  if (b.issue_github_assignees && b.issue_github_assignees.length > 0) return false;
-  if (b.claimer_usernames.length > 0) return false;
-  return true;
+function isCandidate(b: Bounty): boolean {
+  return b.verdict === "CANDIDATE" || b.verdict === "CAUTION";
 }
+
+const VERDICT_BADGE: Record<Verdict, string> = {
+  CANDIDATE: "🟢",
+  CAUTION: "⚠️",
+  REDOCEAN: "🌊",
+  AVOID: "🔴",
+  UNKNOWN: "❓",
+};
 
 const START = "<!-- stats-start -->";
 const END = "<!-- stats-end -->";
@@ -68,15 +78,12 @@ function topLanguages(bounties: Bounty[], limit = 8): string {
 }
 
 function statusBadge(b: Bounty): string {
-  if (b.issue_state === "closed") return "🔒closed";
-  if (b.claimer_usernames.length > 0)
-    return `👥claimed(${b.claimer_usernames[0]})`;
-  if (b.issue_github_assignees && b.issue_github_assignees.length > 0)
-    return `👥gh-assigned(${b.issue_github_assignees[0]})`;
-  if (b.trying_usernames.length > 0)
-    return `⏳trying(${b.trying_usernames.length})`;
-  if (b.issue_state === "open") return "🟢open";
-  return "❓";
+  const v = b.verdict ?? "UNKNOWN";
+  const badge = VERDICT_BADGE[v];
+  const attempts = b.attempt_count ?? 0;
+  const prs = b.existing_pr_count ?? 0;
+  const detail = attempts > 0 || prs > 0 ? ` (${attempts}att/${prs}pr)` : "";
+  return `${badge}${v}${detail}`;
 }
 
 function main() {
@@ -86,9 +93,9 @@ function main() {
   const total = bounties.reduce((s, b) => s + b.amount_usd, 0);
   const now = new Date().toISOString().slice(0, 10);
 
-  const available = bounties.filter(isAvailable);
-  const availableTotal = available.reduce((s, b) => s + b.amount_usd, 0);
-  const availableList = available
+  const candidates = bounties.filter(isCandidate);
+  const candidatesTotal = candidates.reduce((s, b) => s + b.amount_usd, 0);
+  const candidateList = candidates
     .slice()
     .sort((a, b) => b.amount_usd - a.amount_usd)
     .slice(0, 20)
@@ -97,7 +104,8 @@ function main() {
       const link = b.url ? `[${title}](${b.url})` : title;
       const langs = b.programming_languages.length > 0 ? ` \`${b.programming_languages.join(",")}\`` : "";
       const trying = b.trying_usernames.length > 0 ? ` (⏳${b.trying_usernames.length} trying)` : "";
-      return `- **$${fmt(b.amount_usd)}** — ${link} *(${b.org_name ?? "?"})*${langs}${trying}`;
+      const badge = b.verdict === "CAUTION" ? " ⚠️CAUTION" : "";
+      return `- **$${fmt(b.amount_usd)}** — ${link} *(${b.org_name ?? "?"})*${langs}${trying}${badge}`;
     })
     .join("\n");
 
@@ -106,11 +114,11 @@ function main() {
     "",
     `_Last updated: ${now}_`,
     "",
-    `**Tracked total:** ${bounties.length} / **$${fmt(total)}** | **Truly available:** ${available.length} / **$${fmt(availableTotal)}**`,
+    `**Tracked total:** ${bounties.length} / **$${fmt(total)}** | **Candidates:** ${candidates.length} / **$${fmt(candidatesTotal)}**`,
     "",
-    "### 🟢 Truly available (unclaimed, by reward)",
+    "### 🟢 Candidates (CANDIDATE + CAUTION, by reward)",
     "",
-    availableList || "_none right now_",
+    candidateList || "_none right now_",
     "",
     "### Top repos (by total reward)",
     "",
@@ -120,7 +128,7 @@ function main() {
     "",
     topLanguages(bounties),
     "",
-    "### Latest 20 (with status)",
+    "### Latest 20 (with verdict)",
     "",
     bounties
       .slice(0, 20)

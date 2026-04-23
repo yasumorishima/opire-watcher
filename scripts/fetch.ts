@@ -4,6 +4,8 @@ import { resolve } from "node:path";
 const ENDPOINT = "https://api.opire.dev/rewards?page=1&itemsPerPage=100";
 
 type User = { id: string; username: string; avatarURL: string };
+type Verdict = "AVOID" | "REDOCEAN" | "CAUTION" | "CANDIDATE" | "UNKNOWN";
+
 type Bounty = {
   id: string;
   amount_usd: number;
@@ -21,118 +23,144 @@ type Bounty = {
   created_at: string | null;
   fetched_at: string;
   issue_state?: "open" | "closed" | "unknown";
-  issue_github_assignees?: string[];
+  issue_assignees?: string[];
+  issue_labels?: string[];
+  attempt_count?: number;
+  existing_pr_count?: number;
+  gating_flags?: string[];
+  verdict?: Verdict;
   availability_checked_at?: string;
-  progress_signals?: ProgressSignals;
 };
 
-type ProgressSignals = {
-  linked_prs: string[];
-  try_commenters: string[];
-  working_commenters: string[];
-  last_activity: string | null;
-  verdict: "likely_taken" | "contested" | "open";
-};
+const GATING_LABEL_PATTERNS = [
+  { pattern: /core\s*team/i, flag: "core-team-only" },
+  { pattern: /reserved.*(interview|hire|hiring|se[-\s]interview)/i, flag: "reserved-for-interview" },
+  { pattern: /maintainer.*only/i, flag: "maintainers-only" },
+  { pattern: /internal\s*only/i, flag: "internal-only" },
+  { pattern: /do\s*not\s*(work|fix|implement)/i, flag: "do-not-work" },
+];
 
-async function checkIssue(
-  url: string | null,
-  token: string | undefined,
-): Promise<{ state: "open" | "closed" | "unknown"; assignees: string[] } | null> {
-  if (!url) return null;
-  const m = url.match(/github\.com\/([^/]+)\/([^/]+)\/issues\/(\d+)/i);
-  if (!m) return null;
-  const [, owner, repo, num] = m;
+const GATING_BODY_PATTERNS = [
+  { pattern: /reserved\s+for\s+(se\s+)?interview/i, flag: "reserved-for-interview" },
+  { pattern: /core\s+team\s+only/i, flag: "core-team-only" },
+  { pattern: /only\s+for\s+core\s+team/i, flag: "core-team-only" },
+];
+
+async function ghFetch(url: string, token: string | undefined): Promise<any | null> {
   try {
-    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/issues/${num}`, {
+    const res = await fetch(url, {
       headers: {
         "user-agent": "opire-watcher",
         accept: "application/vnd.github+json",
         ...(token ? { authorization: `Bearer ${token}` } : {}),
       },
     });
-    if (!res.ok) return { state: "unknown", assignees: [] };
-    const j = (await res.json()) as any;
-    return {
-      state: j.state === "closed" ? "closed" : j.state === "open" ? "open" : "unknown",
-      assignees: (j.assignees ?? []).map((a: any) => a.login),
-    };
+    if (!res.ok) return null;
+    return await res.json();
   } catch {
-    return { state: "unknown", assignees: [] };
+    return null;
   }
 }
 
-export async function fetchIssueProgress(
+async function enrichIssue(
   url: string | null,
   token: string | undefined,
-): Promise<ProgressSignals | null> {
+): Promise<{
+  state: "open" | "closed" | "unknown";
+  assignees: string[];
+  labels: string[];
+  attempt_count: number;
+  existing_pr_count: number;
+  gating_flags: string[];
+} | null> {
   if (!url) return null;
   const m = url.match(/github\.com\/([^/]+)\/([^/]+)\/issues\/(\d+)/i);
   if (!m) return null;
   const [, owner, repo, num] = m;
-  const headers = {
-    "user-agent": "opire-watcher",
-    accept: "application/vnd.github+json",
-    ...(token ? { authorization: `Bearer ${token}` } : {}),
-  };
-  try {
-    const [issueRes, commentsRes] = await Promise.all([
-      fetch(`https://api.github.com/repos/${owner}/${repo}/issues/${num}`, { headers }),
-      fetch(
-        `https://api.github.com/repos/${owner}/${repo}/issues/${num}/comments?per_page=100`,
-        { headers },
-      ),
-    ]);
-    if (!issueRes.ok || !commentsRes.ok) return null;
-    const issue = (await issueRes.json()) as any;
-    const comments = (await commentsRes.json()) as any[];
 
-    const texts: { author: string; body: string; at: string }[] = [
-      { author: issue.user?.login ?? "?", body: issue.body ?? "", at: issue.created_at },
-      ...comments.map((c: any) => ({
-        author: c.user?.login ?? "?",
-        body: c.body ?? "",
-        at: c.created_at,
-      })),
-    ];
+  const issue = await ghFetch(
+    `https://api.github.com/repos/${owner}/${repo}/issues/${num}`,
+    token,
+  );
+  if (!issue) return { state: "unknown", assignees: [], labels: [], attempt_count: 0, existing_pr_count: 0, gating_flags: [] };
 
-    const prRe =
-      /https?:\/\/github\.com\/[\w.-]+\/[\w.-]+\/pull\/\d+|(?<![\w-])#(\d+)\b/g;
-    const linkedPrs = new Set<string>();
-    const tryCommenters = new Set<string>();
-    const workingCommenters = new Set<string>();
-    let lastActivity: string | null = null;
+  const state: "open" | "closed" | "unknown" =
+    issue.state === "closed" ? "closed" : issue.state === "open" ? "open" : "unknown";
+  const assignees: string[] = (issue.assignees ?? []).map((a: any) => a.login);
+  const labels: string[] = (issue.labels ?? [])
+    .map((l: any) => (typeof l === "string" ? l : l?.name ?? ""))
+    .filter(Boolean);
+  const body: string = issue.body ?? "";
 
-    const tryRe = /(^|\s)\/(try|attempt|claim)\b/i;
-    const workingRe =
-      /\b(working on (this|it)|i'?ll (take|work on|handle|do) (this|it)|assign (this|it|me)|on it|taking this|pick(ing)? this up|raised (a )?pr|opened (a )?pr|my pr|will (submit|create|open) (a )?pr|i am working)\b/i;
-
-    for (const t of texts) {
-      if (!t.at) continue;
-      if (!lastActivity || t.at > lastActivity) lastActivity = t.at;
-      const body = t.body || "";
-      const matches = body.match(prRe);
-      if (matches) for (const m of matches) linkedPrs.add(m);
-      if (tryRe.test(body)) tryCommenters.add(t.author);
-      if (workingRe.test(body)) workingCommenters.add(t.author);
+  const gating_flags_set = new Set<string>();
+  for (const l of labels) {
+    for (const { pattern, flag } of GATING_LABEL_PATTERNS) {
+      if (pattern.test(l)) gating_flags_set.add(flag);
     }
-
-    const hasRealPr = [...linkedPrs].some((p) => p.includes("/pull/"));
-    const verdict: ProgressSignals["verdict"] = hasRealPr
-      ? "likely_taken"
-      : workingCommenters.size > 0 || tryCommenters.size >= 3
-        ? "contested"
-        : "open";
-
-    return {
-      linked_prs: [...linkedPrs],
-      try_commenters: [...tryCommenters],
-      working_commenters: [...workingCommenters],
-      last_activity: lastActivity,
-      verdict,
-    };
-  } catch {
-    return null;
   }
+  for (const { pattern, flag } of GATING_BODY_PATTERNS) {
+    if (pattern.test(body)) gating_flags_set.add(flag);
+  }
+
+  let attempt_count = 0;
+  const comments = await ghFetch(
+    `https://api.github.com/repos/${owner}/${repo}/issues/${num}/comments?per_page=100`,
+    token,
+  );
+  if (Array.isArray(comments)) {
+    for (const c of comments) {
+      const cb: string = c?.body ?? "";
+      if (/\/attempt\b/i.test(cb)) attempt_count++;
+      for (const { pattern, flag } of GATING_BODY_PATTERNS) {
+        if (pattern.test(cb)) gating_flags_set.add(flag);
+      }
+    }
+  }
+
+  let existing_pr_count = 0;
+  const prSet = new Set<number>();
+  let page = 1;
+  while (page <= 5) {
+    const timeline = await ghFetch(
+      `https://api.github.com/repos/${owner}/${repo}/issues/${num}/timeline?per_page=100&page=${page}`,
+      token,
+    );
+    if (!Array.isArray(timeline) || timeline.length === 0) break;
+    for (const e of timeline) {
+      if (
+        e?.event === "cross-referenced" &&
+        e?.source?.issue?.pull_request &&
+        typeof e?.source?.issue?.number === "number"
+      ) {
+        prSet.add(e.source.issue.number);
+      }
+    }
+    if (timeline.length < 100) break;
+    page++;
+  }
+  existing_pr_count = prSet.size;
+
+  return {
+    state,
+    assignees,
+    labels,
+    attempt_count,
+    existing_pr_count,
+    gating_flags: [...gating_flags_set],
+  };
+}
+
+function computeVerdict(b: Bounty): Verdict {
+  if (b.issue_state === "closed") return "AVOID";
+  if (b.claimer_usernames.length > 0) return "AVOID";
+  if (b.issue_state === undefined) return "UNKNOWN";
+  if (b.gating_flags && b.gating_flags.length > 0) return "AVOID";
+  if (b.issue_assignees && b.issue_assignees.length > 0) return "AVOID";
+  const attempts = b.attempt_count ?? 0;
+  const prs = b.existing_pr_count ?? 0;
+  if (attempts >= 10 || prs >= 5) return "REDOCEAN";
+  if (attempts >= 3 || prs >= 2) return "CAUTION";
+  return "CANDIDATE";
 }
 
 function extractRepoOwner(url: string | null): string | null {
@@ -194,40 +222,68 @@ async function main() {
 
   const ghToken = process.env.GITHUB_TOKEN;
   for (const b of bounties) {
-    const info = await checkIssue(b.url, ghToken);
+    const info = await enrichIssue(b.url, ghToken);
     if (info) {
       b.issue_state = info.state;
-      b.issue_github_assignees = info.assignees;
+      b.issue_assignees = info.assignees;
+      b.issue_labels = info.labels;
+      b.attempt_count = info.attempt_count;
+      b.existing_pr_count = info.existing_pr_count;
+      b.gating_flags = info.gating_flags;
       b.availability_checked_at = now;
     }
+    b.verdict = computeVerdict(b);
   }
+
   const prevById = new Map(prev.map((b) => [b.id, b]));
   for (const b of bounties) {
     if (b.issue_state === undefined) {
       const p = prevById.get(b.id);
       if (p?.issue_state !== undefined) {
         b.issue_state = p.issue_state;
-        b.issue_github_assignees = p.issue_github_assignees;
+        b.issue_assignees = p.issue_assignees;
+        b.issue_labels = p.issue_labels;
+        b.attempt_count = p.attempt_count;
+        b.existing_pr_count = p.existing_pr_count;
+        b.gating_flags = p.gating_flags;
         b.availability_checked_at = p.availability_checked_at;
+        b.verdict = computeVerdict(b);
       }
     }
   }
 
-  const newIds = new Set(newOnes.map((b) => b.id));
-  for (const b of bounties) {
-    if (!newIds.has(b.id)) continue;
-    const signals = await fetchIssueProgress(b.url, ghToken);
-    if (signals) b.progress_signals = signals;
-  }
   for (const b of newOnes) {
-    const match = bounties.find((x) => x.id === b.id);
-    if (match?.progress_signals) b.progress_signals = match.progress_signals;
+    const enriched = bounties.find((x) => x.id === b.id);
+    if (enriched) {
+      b.issue_state = enriched.issue_state;
+      b.issue_assignees = enriched.issue_assignees;
+      b.issue_labels = enriched.issue_labels;
+      b.attempt_count = enriched.attempt_count;
+      b.existing_pr_count = enriched.existing_pr_count;
+      b.gating_flags = enriched.gating_flags;
+      b.verdict = enriched.verdict;
+      b.availability_checked_at = enriched.availability_checked_at;
+    }
   }
 
-  const merged = [
-    ...bounties,
-    ...prev.filter((b) => !bounties.some((c) => c.id === b.id)),
-  ].sort((a, b) => (b.created_at ?? "").localeCompare(a.created_at ?? ""));
+  const stalePrev = prev.filter((b) => !bounties.some((c) => c.id === b.id));
+  for (const b of stalePrev) {
+    const info = await enrichIssue(b.url, ghToken);
+    if (info) {
+      b.issue_state = info.state;
+      b.issue_assignees = info.assignees;
+      b.issue_labels = info.labels;
+      b.attempt_count = info.attempt_count;
+      b.existing_pr_count = info.existing_pr_count;
+      b.gating_flags = info.gating_flags;
+      b.availability_checked_at = now;
+    }
+    b.verdict = computeVerdict(b);
+  }
+
+  const merged = [...bounties, ...stalePrev].sort(
+    (a, b) => (b.created_at ?? "").localeCompare(a.created_at ?? ""),
+  );
 
   writeFileSync(outPath, JSON.stringify(merged, null, 2) + "\n");
   writeFileSync(

@@ -54,18 +54,17 @@ jobs:
           fi
           body=$(jq -r '
             def badge:
-              .progress_signals.verdict as $v |
-              if $v == "likely_taken" then " ⚠️ 実質着手済（PR有）"
-              elif $v == "contested" then " ⚠️ 競合あり"
+              .verdict as $v |
+              if $v == "AVOID" then " 🔴AVOID"
+              elif $v == "REDOCEAN" then " 🌊REDOCEAN"
+              elif $v == "CAUTION" then " ⚠️CAUTION"
+              elif $v == "CANDIDATE" then " 🟢CANDIDATE"
               else "" end;
             def detail:
-              .progress_signals as $s |
-              if $s == null then "" else
-                "\n    " +
-                (if ($s.linked_prs | length) > 0 then "PR: " + ($s.linked_prs | join(", ")) + " / " else "" end) +
-                (if ($s.working_commenters | length) > 0 then "working: " + ($s.working_commenters | join(",")) + " / " else "" end) +
-                (if ($s.try_commenters | length) > 0 then "/try: " + (($s.try_commenters | length)|tostring) else "" end)
-              end;
+              (if ((.attempt_count // 0) > 0 or ((.existing_pr_count // 0) > 0))
+               then " [att:" + ((.attempt_count // 0)|tostring) + " pr:" + ((.existing_pr_count // 0)|tostring) + "]"
+               else "" end) +
+              (if (.gating_flags | length) > 0 then " flags:" + (.gating_flags | join(",")) else "" end);
             "## New Opire bounties (" + (now | strftime("%Y-%m-%d")) + ")\n\n" +
             ([.[] | "- **$" + (.amount_usd|tostring) + "** [" + (.org_name // "?") + "] " +
               (if .title then .title else "(no title)" end) +
