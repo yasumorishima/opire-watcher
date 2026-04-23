@@ -153,7 +153,7 @@ async function enrichIssue(
 function computeVerdict(b: Bounty): Verdict {
   if (b.issue_state === "closed") return "AVOID";
   if (b.claimer_usernames.length > 0) return "AVOID";
-  if (b.issue_state === undefined) return "UNKNOWN";
+  if (b.issue_state === undefined || b.issue_state === "unknown") return "UNKNOWN";
   if (b.gating_flags && b.gating_flags.length > 0) return "AVOID";
   if (b.issue_assignees && b.issue_assignees.length > 0) return "AVOID";
   const attempts = b.attempt_count ?? 0;
