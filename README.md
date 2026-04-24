@@ -46,7 +46,7 @@ _Last updated: 2026-04-24_
 
 ### Latest 20 (with verdict)
 
-- 🔴AVOID (7att/11pr) **$80** — [[Proposal] Support configuring permissions of automatic tokens of Actions jobs](https://github.com/go-gitea/gitea/issues/24635) *(go-gitea)*
+- 🔴AVOID (7att/5pr) **$80** — [[Proposal] Support configuring permissions of automatic tokens of Actions jobs](https://github.com/go-gitea/gitea/issues/24635) *(go-gitea)*
 - ❓UNKNOWN **$70** — [macOS: dialog.showOpenDialog fails to show custom macOS packages (LSTypeIsPackage) when filtered by extension in Electron 36.2.0+ (worked in 35.7.5; 36.0.0 showed all files)](https://github.com/electron/electron/issues/48191) *(electron)*
 - 🟢CANDIDATE **$50** — [[BOUNTY] WearOS Support [$1340]](https://github.com/microg/GmsCore/issues/2843) *(microg)*
 - ❓UNKNOWN **$30** — [[BOUNTY] RCS Support [14999$]](https://github.com/microg/GmsCore/issues/2994) *(microg)*
