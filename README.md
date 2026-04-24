@@ -13,13 +13,13 @@ Periodic snapshot of open bounties on [Opire](https://opire.dev).
 
 <!-- stats-start -->
 
-_Last updated: 2026-04-23_
+_Last updated: 2026-04-24_
 
-**Tracked total:** 36 / **$20,260.22** | **Candidates:** 0 / **$0**
+**Tracked total:** 37 / **$20,340.22** | **Candidates:** 1 / **$50**
 
 ### 🟢 Candidates (CANDIDATE + CAUTION, by reward)
 
-_none right now_
+- **$50** — [[BOUNTY] WearOS Support [$1340]](https://github.com/microg/GmsCore/issues/2843) *(microg)* `Java`
 
 ### Top repos (by total reward)
 
@@ -46,8 +46,9 @@ _none right now_
 
 ### Latest 20 (with verdict)
 
-- 🔴AVOID (0att/8pr) **$70** — [macOS: dialog.showOpenDialog fails to show custom macOS packages (LSTypeIsPackage) when filtered by extension in Electron 36.2.0+ (worked in 35.7.5; 36.0.0 showed all files)](https://github.com/electron/electron/issues/48191) *(electron)*
-- ❓UNKNOWN **$50** — [[BOUNTY] WearOS Support [$1340]](https://github.com/microg/GmsCore/issues/2843) *(microg)*
+- 🔴AVOID (7att/11pr) **$80** — [[Proposal] Support configuring permissions of automatic tokens of Actions jobs](https://github.com/go-gitea/gitea/issues/24635) *(go-gitea)*
+- ❓UNKNOWN **$70** — [macOS: dialog.showOpenDialog fails to show custom macOS packages (LSTypeIsPackage) when filtered by extension in Electron 36.2.0+ (worked in 35.7.5; 36.0.0 showed all files)](https://github.com/electron/electron/issues/48191) *(electron)*
+- 🟢CANDIDATE **$50** — [[BOUNTY] WearOS Support [$1340]](https://github.com/microg/GmsCore/issues/2843) *(microg)*
 - ❓UNKNOWN **$30** — [[BOUNTY] RCS Support [14999$]](https://github.com/microg/GmsCore/issues/2994) *(microg)*
 - 🔴AVOID (0att/4pr) **$48.22** — [Request to execute qtop across two HPC clusters and apply first step of differential debugging](https://github.com/qtop/qtop/issues/337) *(qtop)*
 - 🔴AVOID **$40** — [Implement ST7789 parallel protocol in PIO](https://github.com/tinygo-org/pio/issues/38) *(tinygo-org)*
@@ -64,8 +65,7 @@ _none right now_
 - 🔴AVOID (0att/3pr) **$1,500** — [Asynchronous Web APIs](https://github.com/uswriting/zeroperl/issues/7) *(uswriting)*
 - 🔴AVOID **$20** — [SSTV RX](https://github.com/portapack-mayhem/mayhem-firmware/issues/2045) *(portapack-mayhem)*
 - 🔴AVOID **$20** — [Nest js icons](https://github.com/tal7aouy/vscode-icons/issues/87) *(pwvux)*
-- 🔴AVOID (0att/4pr) **$40** — [Is there a matrix size limit?](https://github.com/RichieHakim/sparse_convolution/issues/1) *(RichieHakim)*
-- 🔴AVOID (0att/12pr) **$60** — [[BUG] Internal Server Errors still shows success toast](https://github.com/formbricks/formbricks/issues/3302) *(formbricks)*
+- 🔴AVOID **$40** — [Is there a matrix size limit?](https://github.com/RichieHakim/sparse_convolution/issues/1) *(RichieHakim)*
 
 <!-- stats-end -->
 
