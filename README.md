@@ -15,11 +15,11 @@ Periodic snapshot of open bounties on [Opire](https://opire.dev).
 
 _Last updated: 2026-04-25_
 
-**Tracked total:** 37 / **$20,340.22** | **Candidates:** 1 / **$50**
+**Tracked total:** 37 / **$20,340.22** | **Candidates:** 0 / **$0**
 
 ### 🟢 Candidates (CANDIDATE + CAUTION, by reward)
 
-- **$50** — [[BOUNTY] WearOS Support [$1340]](https://github.com/microg/GmsCore/issues/2843) *(microg)* `Java`
+_none right now_
 
 ### Top repos (by total reward)
 
@@ -48,9 +48,9 @@ _Last updated: 2026-04-25_
 
 - 🔴AVOID (7att/0pr) **$80** — [[Proposal] Support configuring permissions of automatic tokens of Actions jobs](https://github.com/go-gitea/gitea/issues/24635) *(go-gitea)*
 - ❓UNKNOWN **$70** — [macOS: dialog.showOpenDialog fails to show custom macOS packages (LSTypeIsPackage) when filtered by extension in Electron 36.2.0+ (worked in 35.7.5; 36.0.0 showed all files)](https://github.com/electron/electron/issues/48191) *(electron)*
-- 🟢CANDIDATE **$50** — [[BOUNTY] WearOS Support [$1340]](https://github.com/microg/GmsCore/issues/2843) *(microg)*
+- ❓UNKNOWN **$50** — [[BOUNTY] WearOS Support [$1340]](https://github.com/microg/GmsCore/issues/2843) *(microg)*
 - ❓UNKNOWN **$30** — [[BOUNTY] RCS Support [14999$]](https://github.com/microg/GmsCore/issues/2994) *(microg)*
-- 🔴AVOID (0att/4pr) **$48.22** — [Request to execute qtop across two HPC clusters and apply first step of differential debugging](https://github.com/qtop/qtop/issues/337) *(qtop)*
+- 🔴AVOID **$48.22** — [Request to execute qtop across two HPC clusters and apply first step of differential debugging](https://github.com/qtop/qtop/issues/337) *(qtop)*
 - 🔴AVOID **$40** — [Implement ST7789 parallel protocol in PIO](https://github.com/tinygo-org/pio/issues/38) *(tinygo-org)*
 - 🔴AVOID (3att/7pr) **$1,620** — [Donation/funding for german language](https://github.com/hexgrad/kokoro/issues/290) *(hexgrad)*
 - 🔴AVOID (0att/3pr) **$150** — [Support for Ethernet peripheral (ESP32 / ESP32-P4)](https://github.com/esp-rs/esp-hal/issues/4163) *(esp-rs)*
