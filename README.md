@@ -13,7 +13,7 @@ Periodic snapshot of open bounties on [Opire](https://opire.dev).
 
 <!-- stats-start -->
 
-_Last updated: 2026-04-25_
+_Last updated: 2026-04-26_
 
 **Tracked total:** 37 / **$20,340.22** | **Candidates:** 0 / **$0**
 
