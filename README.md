@@ -46,7 +46,7 @@ _none right now_
 
 ### Latest 20 (with verdict)
 
-- ❓UNKNOWN **$80** — [[Proposal] Support configuring permissions of automatic tokens of Actions jobs](https://github.com/go-gitea/gitea/issues/24635) *(go-gitea)*
+- 🔴AVOID **$80** — [[Proposal] Support configuring permissions of automatic tokens of Actions jobs](https://github.com/go-gitea/gitea/issues/24635) *(go-gitea)*
 - ❓UNKNOWN **$70** — [macOS: dialog.showOpenDialog fails to show custom macOS packages (LSTypeIsPackage) when filtered by extension in Electron 36.2.0+ (worked in 35.7.5; 36.0.0 showed all files)](https://github.com/electron/electron/issues/48191) *(electron)*
 - ❓UNKNOWN **$50** — [[BOUNTY] WearOS Support [$1340]](https://github.com/microg/GmsCore/issues/2843) *(microg)*
 - ❓UNKNOWN **$30** — [[BOUNTY] RCS Support [14999$]](https://github.com/microg/GmsCore/issues/2994) *(microg)*
@@ -56,7 +56,7 @@ _none right now_
 - 🔴AVOID (0att/3pr) **$150** — [Support for Ethernet peripheral (ESP32 / ESP32-P4)](https://github.com/esp-rs/esp-hal/issues/4163) *(esp-rs)*
 - 🔴AVOID **$20** — [Image resize](https://github.com/ArcaneCircle/pixelsocial/issues/3) *(ArcaneCircle)*
 - 🔴AVOID **$100** — [Tray icon should have an orange dot indicator](https://github.com/aueangpanit/electron-template/issues/1) *(aueangpanit)*
-- 🔴AVOID **$100** — [Crash](https://github.com/FalkorDB/FalkorDB/issues/622) *(FalkorDB)*
+- 🔴AVOID (0att/1pr) **$100** — [Crash](https://github.com/FalkorDB/FalkorDB/issues/622) *(FalkorDB)*
 - 🔴AVOID (0att/16pr) **$900** — [Crash found in fuzzer](https://github.com/FalkorDB/FalkorDB/issues/636) *(FalkorDB)*
 - 🔴AVOID (1att/7pr) **$200** — [Replace tut with doctest](https://github.com/secondlife/viewer/issues/4445) *(secondlife)*
 - ❓UNKNOWN **$20** — [Images on the bottom of level up messages](https://github.com/buape/kiai-bounties/issues/1) *(buape)*
