@@ -13,7 +13,7 @@ Periodic snapshot of open bounties on [Opire](https://opire.dev).
 
 <!-- stats-start -->
 
-_Last updated: 2026-04-27_
+_Last updated: 2026-04-28_
 
 **Tracked total:** 37 / **$20,320.22** | **Candidates:** 0 / **$0**
 
@@ -46,7 +46,7 @@ _none right now_
 
 ### Latest 20 (with verdict)
 
-- 🔴AVOID (7att/5pr) **$80** — [[Proposal] Support configuring permissions of automatic tokens of Actions jobs](https://github.com/go-gitea/gitea/issues/24635) *(go-gitea)*
+- 🔴AVOID (7att/0pr) **$80** — [[Proposal] Support configuring permissions of automatic tokens of Actions jobs](https://github.com/go-gitea/gitea/issues/24635) *(go-gitea)*
 - ❓UNKNOWN **$70** — [macOS: dialog.showOpenDialog fails to show custom macOS packages (LSTypeIsPackage) when filtered by extension in Electron 36.2.0+ (worked in 35.7.5; 36.0.0 showed all files)](https://github.com/electron/electron/issues/48191) *(electron)*
 - ❓UNKNOWN **$50** — [[BOUNTY] WearOS Support [$1340]](https://github.com/microg/GmsCore/issues/2843) *(microg)*
 - ❓UNKNOWN **$30** — [[BOUNTY] RCS Support [14999$]](https://github.com/microg/GmsCore/issues/2994) *(microg)*
