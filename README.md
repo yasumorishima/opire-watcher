@@ -56,7 +56,7 @@ _none right now_
 - 🔴AVOID (0att/3pr) **$150** — [Support for Ethernet peripheral (ESP32 / ESP32-P4)](https://github.com/esp-rs/esp-hal/issues/4163) *(esp-rs)*
 - 🔴AVOID **$20** — [Image resize](https://github.com/ArcaneCircle/pixelsocial/issues/3) *(ArcaneCircle)*
 - 🔴AVOID **$100** — [Tray icon should have an orange dot indicator](https://github.com/aueangpanit/electron-template/issues/1) *(aueangpanit)*
-- 🔴AVOID **$100** — [Crash](https://github.com/FalkorDB/FalkorDB/issues/622) *(FalkorDB)*
+- 🔴AVOID (0att/1pr) **$100** — [Crash](https://github.com/FalkorDB/FalkorDB/issues/622) *(FalkorDB)*
 - 🔴AVOID (0att/16pr) **$900** — [Crash found in fuzzer](https://github.com/FalkorDB/FalkorDB/issues/636) *(FalkorDB)*
 - 🔴AVOID (1att/8pr) **$200** — [Replace tut with doctest](https://github.com/secondlife/viewer/issues/4445) *(secondlife)*
 - ❓UNKNOWN **$20** — [Images on the bottom of level up messages](https://github.com/buape/kiai-bounties/issues/1) *(buape)*
