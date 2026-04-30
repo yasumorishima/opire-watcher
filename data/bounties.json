@@ -16,15 +16,20 @@
     "claimer_usernames": [],
     "trying_usernames": [],
     "created_at": "2026-04-24T02:30:44.199Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
-    "issue_state": "unknown",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
+    "issue_state": "closed",
     "issue_assignees": [],
-    "issue_labels": [],
-    "attempt_count": 0,
-    "existing_pr_count": 0,
+    "issue_labels": [
+      "type/proposal",
+      "topic/gitea-actions",
+      "💎 Bounty",
+      "$100"
+    ],
+    "attempt_count": 7,
+    "existing_pr_count": 11,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
-    "verdict": "UNKNOWN"
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
+    "verdict": "AVOID"
   },
   {
     "id": "01KPXQ3E5HG0S4MDWQ33Q63KMS",
@@ -43,14 +48,14 @@
     "claimer_usernames": [],
     "trying_usernames": [],
     "created_at": "2026-04-23T17:44:45.489Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "unknown",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
     "existing_pr_count": 0,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "UNKNOWN"
   },
   {
@@ -70,14 +75,14 @@
     "claimer_usernames": [],
     "trying_usernames": [],
     "created_at": "2026-04-23T17:29:48.933Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "unknown",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
     "existing_pr_count": 0,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "UNKNOWN"
   },
   {
@@ -97,15 +102,18 @@
     "claimer_usernames": [],
     "trying_usernames": [],
     "created_at": "2026-04-23T16:59:24.265Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
-    "issue_state": "unknown",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
+    "issue_state": "open",
     "issue_assignees": [],
-    "issue_labels": [],
+    "issue_labels": [
+      "enhancement",
+      "bounty"
+    ],
     "attempt_count": 0,
-    "existing_pr_count": 0,
+    "existing_pr_count": 2,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
-    "verdict": "UNKNOWN"
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
+    "verdict": "CAUTION"
   },
   {
     "id": "01KEWXJ6FH5C2Z7XZVSG7TACJE",
@@ -128,14 +136,14 @@
       "tani125"
     ],
     "created_at": "2026-01-14T00:12:51.570Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
-    "issue_state": "unknown",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
+    "issue_state": "open",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
-    "existing_pr_count": 0,
+    "existing_pr_count": 4,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -159,14 +167,14 @@
       "maxx5ive"
     ],
     "created_at": "2025-12-30T18:36:14.994Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
-    "issue_state": "unknown",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
+    "issue_state": "open",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
-    "existing_pr_count": 0,
+    "existing_pr_count": 4,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -198,14 +206,14 @@
       "semidark"
     ],
     "created_at": "2025-12-16T16:20:14.500Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "open",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 3,
     "existing_pr_count": 7,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -229,7 +237,7 @@
       "itsdevrajchauhan"
     ],
     "created_at": "2025-11-13T05:09:05.477Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "open",
     "issue_assignees": [],
     "issue_labels": [
@@ -240,7 +248,7 @@
     "attempt_count": 0,
     "existing_pr_count": 3,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -264,14 +272,14 @@
       "Aqil-Ahmad"
     ],
     "created_at": "2025-11-05T16:41:58.195Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "unknown",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
     "existing_pr_count": 0,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -297,14 +305,14 @@
       "Mohitkumar6122"
     ],
     "created_at": "2025-10-02T19:04:06.716Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "unknown",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
     "existing_pr_count": 0,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -329,7 +337,7 @@
       "moneyyiiss"
     ],
     "created_at": "2025-09-26T16:10:02.242Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "closed",
     "issue_assignees": [
       "swilly22"
@@ -340,7 +348,7 @@
     "attempt_count": 0,
     "existing_pr_count": 1,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -376,7 +384,7 @@
       "shehzada9933"
     ],
     "created_at": "2025-09-26T16:08:48.177Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "open",
     "issue_assignees": [
       "Copilot"
@@ -387,7 +395,7 @@
     "attempt_count": 0,
     "existing_pr_count": 16,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -418,7 +426,7 @@
       "lx277856602"
     ],
     "created_at": "2025-07-27T22:16:28.578Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "closed",
     "issue_assignees": [],
     "issue_labels": [
@@ -429,7 +437,7 @@
     "attempt_count": 1,
     "existing_pr_count": 8,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -447,14 +455,14 @@
     "claimer_usernames": [],
     "trying_usernames": [],
     "created_at": "2025-06-29T16:04:44.526Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "unknown",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
     "existing_pr_count": 0,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "UNKNOWN"
   },
   {
@@ -478,14 +486,14 @@
       "faizan-185"
     ],
     "created_at": "2025-04-30T23:33:54.609Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "unknown",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
     "existing_pr_count": 0,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -509,14 +517,14 @@
       "subhra-io"
     ],
     "created_at": "2025-03-14T11:51:34.610Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "unknown",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
     "existing_pr_count": 0,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -536,7 +544,7 @@
     "claimer_usernames": [],
     "trying_usernames": [],
     "created_at": "2025-02-26T04:01:26.041Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "closed",
     "issue_assignees": [],
     "issue_labels": [
@@ -546,7 +554,7 @@
     "attempt_count": 0,
     "existing_pr_count": 3,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -570,14 +578,16 @@
       "bamiebot-maker"
     ],
     "created_at": "2025-01-26T23:06:22.343Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
-    "issue_state": "unknown",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
+    "issue_state": "closed",
     "issue_assignees": [],
-    "issue_labels": [],
+    "issue_labels": [
+      "enhancement"
+    ],
     "attempt_count": 0,
     "existing_pr_count": 0,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -601,14 +611,14 @@
       "ArtificialXDev"
     ],
     "created_at": "2025-01-07T09:08:07.315Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "unknown",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
     "existing_pr_count": 0,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -640,14 +650,14 @@
       "maurobeltrami"
     ],
     "created_at": "2024-11-14T22:19:17.177Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "unknown",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
     "existing_pr_count": 0,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -675,14 +685,16 @@
       "Robert0303-C"
     ],
     "created_at": "2024-10-21T20:27:40.932Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
-    "issue_state": "unknown",
-    "issue_assignees": [],
+    "fetched_at": "2026-04-30T21:57:21.952Z",
+    "issue_state": "closed",
+    "issue_assignees": [
+      "jonas-hoebenreich"
+    ],
     "issue_labels": [],
     "attempt_count": 0,
-    "existing_pr_count": 0,
+    "existing_pr_count": 12,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -716,7 +728,7 @@
       "AndresFpdhi"
     ],
     "created_at": "2024-09-29T09:32:47.030Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "open",
     "issue_assignees": [],
     "issue_labels": [
@@ -728,7 +740,7 @@
     "attempt_count": 0,
     "existing_pr_count": 11,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -752,14 +764,18 @@
       "Robert0303-C"
     ],
     "created_at": "2024-09-27T15:38:39.565Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
-    "issue_state": "unknown",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
+    "issue_state": "open",
     "issue_assignees": [],
-    "issue_labels": [],
+    "issue_labels": [
+      "feat",
+      "lsp",
+      "testing"
+    ],
     "attempt_count": 0,
-    "existing_pr_count": 0,
+    "existing_pr_count": 5,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -789,7 +805,7 @@
       "Robert0303-C"
     ],
     "created_at": "2024-09-25T20:10:15.289Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "closed",
     "issue_assignees": [],
     "issue_labels": [
@@ -798,7 +814,7 @@
     "attempt_count": 0,
     "existing_pr_count": 2,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -828,14 +844,14 @@
       "tommythekatzo-cell"
     ],
     "created_at": "2024-09-20T17:56:56.540Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "unknown",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
     "existing_pr_count": 0,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -880,7 +896,7 @@
       "sajidison"
     ],
     "created_at": "2024-09-06T09:51:30.609Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "open",
     "issue_assignees": [],
     "issue_labels": [
@@ -890,7 +906,7 @@
     "attempt_count": 0,
     "existing_pr_count": 5,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -918,7 +934,7 @@
       "sethstha"
     ],
     "created_at": "2024-08-30T12:08:17.760Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "closed",
     "issue_assignees": [
       "kubkon"
@@ -929,7 +945,7 @@
     "attempt_count": 1,
     "existing_pr_count": 18,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -949,14 +965,14 @@
     "claimer_usernames": [],
     "trying_usernames": [],
     "created_at": "2024-07-30T17:46:26.532Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "unknown",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
     "existing_pr_count": 0,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "UNKNOWN"
   },
   {
@@ -980,7 +996,7 @@
       "Bademeischta"
     ],
     "created_at": "2024-06-21T19:01:21.608Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "closed",
     "issue_assignees": [
       "ahus1"
@@ -997,7 +1013,7 @@
     "attempt_count": 0,
     "existing_pr_count": 6,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -1025,14 +1041,18 @@
       "Robert0303-C"
     ],
     "created_at": "2024-05-02T17:12:34.529Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
-    "issue_state": "unknown",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
+    "issue_state": "closed",
     "issue_assignees": [],
-    "issue_labels": [],
+    "issue_labels": [
+      "type/enhancement",
+      "feature/test-runner",
+      "feature/code-coverage"
+    ],
     "attempt_count": 0,
-    "existing_pr_count": 0,
+    "existing_pr_count": 2,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -1056,14 +1076,19 @@
       "sudo-verse"
     ],
     "created_at": "2024-05-01T12:38:58.756Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
-    "issue_state": "unknown",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
+    "issue_state": "closed",
     "issue_assignees": [],
-    "issue_labels": [],
+    "issue_labels": [
+      "issue: bug",
+      "severity: low",
+      "status: confirmed",
+      "source: core:database"
+    ],
     "attempt_count": 0,
-    "existing_pr_count": 0,
+    "existing_pr_count": 6,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -1087,7 +1112,7 @@
       "lau90eth"
     ],
     "created_at": "2024-05-01T12:31:24.793Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "closed",
     "issue_assignees": [
       "Sidnioulz"
@@ -1103,7 +1128,7 @@
     "attempt_count": 0,
     "existing_pr_count": 6,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -1127,14 +1152,14 @@
       "sanks011"
     ],
     "created_at": "2024-04-30T18:42:32.053Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
-    "issue_state": "unknown",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
+    "issue_state": "open",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
-    "existing_pr_count": 0,
+    "existing_pr_count": 3,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -1174,7 +1199,7 @@
       "budingsoft"
     ],
     "created_at": "2024-04-28T15:42:52.471Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "open",
     "issue_assignees": [
       "AlexMesser"
@@ -1189,7 +1214,7 @@
     "attempt_count": 0,
     "existing_pr_count": 23,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -1221,14 +1246,14 @@
       "Robert0303-C"
     ],
     "created_at": "2024-04-25T12:31:59.748Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "unknown",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
     "existing_pr_count": 0,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -1259,14 +1284,14 @@
       "BossChaos"
     ],
     "created_at": "2024-04-24T15:46:35.364Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "unknown",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
     "existing_pr_count": 0,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   },
   {
@@ -1321,14 +1346,14 @@
       "sidneisilvadev"
     ],
     "created_at": "2024-04-04T17:03:43.525Z",
-    "fetched_at": "2026-04-30T19:26:17.278Z",
+    "fetched_at": "2026-04-30T21:57:21.952Z",
     "issue_state": "unknown",
     "issue_assignees": [],
     "issue_labels": [],
     "attempt_count": 0,
     "existing_pr_count": 0,
     "gating_flags": [],
-    "availability_checked_at": "2026-04-30T19:26:17.278Z",
+    "availability_checked_at": "2026-04-30T21:57:21.952Z",
     "verdict": "AVOID"
   }
 ]
